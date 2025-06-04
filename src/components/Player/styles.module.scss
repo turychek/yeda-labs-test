@@ -1,0 +1,125 @@
+.playerWrapper {
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  position: relative;
+  width: 960px;
+  margin: 40px auto;
+  color: white;
+
+  .video {
+    width: 100%;
+    border-radius: 10px;
+    background: #eaeaea;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14px 12px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 80%);
+    border-radius: 10px;
+    gap: 8px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+
+    .timeline {
+      position: relative;
+      height: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      overflow: visible;
+
+      .progress {
+        position: absolute;
+        height: 100%;
+        background: white;
+        border-radius: 4px 0px 0px 4px;
+        z-index: 2;
+        top: 0;
+        left: 0;
+      }
+
+      .progressEnd {
+        position: absolute;
+        height: 16px;
+        width: 4px;
+        background: white;
+        z-index: 2;
+        top: -6px;
+        left: 0;
+      }
+
+      .chapters {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1;
+
+        .chapter {
+          position: absolute;
+          height: 100%;
+          background: #8b8ea4;
+          z-index: 2;
+          top: 0;
+        }
+      }
+    }
+
+    .controlActions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+
+      .controlBtnGroup {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .controlBtn {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.2s;
+        color: white;
+
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+
+      .time {
+        font-size: 16px;
+        min-width: 90px;
+        text-align: center;
+      }
+
+      .qualitySelect {
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        padding: 4px 8px;
+        background: #f9f9f9;
+        color: #222;
+        outline: none;
+        cursor: pointer;
+        transition: border 0.2s;
+
+        &:hover {
+          border: 1px solid #3b82f6;
+        }
+      }
+    }
+  }
+}

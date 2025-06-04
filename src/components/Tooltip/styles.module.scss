@@ -1,0 +1,16 @@
+.hoverTooltip {
+  position: absolute;
+  top: -56px;
+  background: #222;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}

@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Video Player
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A custom video player built with React, supporting HLS streaming, chapters, and quality selection.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Custom video player built from scratch (no third-party players).
+- HLS streaming support with quality selection (720p, 1080p, etc.) using hls.js.
+- Chapter display on the timeline with hover tooltips.
+- Timeline interaction:
+  - Hover to see current time and chapter name.
+  - Click to seek to the selected time.
 
-### `npm start`
+## Setup & Run Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Clone the repository:**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
 
-### `npm test`
+2. **Install dependencies:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Start the development server:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   The app will open in your browser at [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+src/
+├── components/
+│   ├── Player/         # Main video player component
+│   ├── Tooltip/        # Tooltip for chapter display
+│   └── Settings/       # Quality selection component
+├── assets/             # Icons and other assets
+└── styles/             # Global styles and variables
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Key Decisions & Challenges
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **HLS.js**: Used for HLS streaming and quality selection.
+- **Custom Timeline**: Built from scratch to support chapters and hover tooltips.
+- **Modular SCSS**: Used for styling to keep the code clean and maintainable.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT
