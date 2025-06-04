@@ -145,7 +145,7 @@ const Player: FC<PlayerProps> = ({ hlsPlaylistUrl, videoLength, chapters }) => {
 
   return (
     <div className={styles.playerWrapper}>
-      <video ref={videoRef} className={styles.video} />
+      <video ref={videoRef} onClick={handlePlayPause} className={styles.video} />
       <div className={styles.controls}>
         <div
           className={styles.timeline}
